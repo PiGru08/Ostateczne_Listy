@@ -56,6 +56,7 @@
         <ComboBox x:Name="kategoria_comboBox"  ItemsSource="{Binding gatunki}"/>
         <DataGrid ItemsSource="{Binding WybraneGryKomputerowe}"></DataGrid>
         <Button Click="Button_Click_Wyswietl_Kategorie">Wyswietl</Button>
+        <Label>Podaj id pola które chcesz usunąć (od 0 -> +)</Label>
         <TextBox x:Name="numerGry"></TextBox>
         <Button Click="Button_Click_Usuwanie">Usuń</Button>
     </StackPanel>

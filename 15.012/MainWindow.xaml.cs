@@ -86,13 +86,21 @@ namespace _15._012
         private void Button_Click_Usuwanie(object sender, RoutedEventArgs e)
         {
             int numer = 0;
+            bool znalezione = false;
             if (int.TryParse(numerGry.Text, out numer))
                 for (int i = 0; i < GryKomputerowe.Count; i++)
             {
                     if (GryKomputerowe[i].id == numer)
                     {
-                        GryKomputerowe.Remove(GryKomputerowe[i]);
+                        znalezione = true;
+                        MessageBoxResult messageBoxResult = MessageBox.Show("Czy napewno chcesz usunąć?","Pytanie",MessageBoxButton.YesNo);
+                        if(messageBoxResult == MessageBoxResult.Yes)
+                        {
+                            GryKomputerowe.RemoveAt(i);
+                        }
                     }
+                   
+
 
 
 
